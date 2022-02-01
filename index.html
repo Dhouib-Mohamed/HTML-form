@@ -79,28 +79,30 @@
 </table><br>
 <div align ="center">
     <h1>Inscription en licence</h1><br>
-    <form action="">
+    <form action="video.html">
     <fieldset>
         <legend align="center">Informations Personelles</legend>
         
             <div><label>Votre nom  <Input placeholder="votre nom?"></Input></label></div><br>
             <div><label>Votre prénom  <Input placeholder="votre Prénom?"></Input></label></div><br>
-            <div><label>Votre age  <Input placeholder="votre age?" type="number"></Input></label></div><br>
+            <div><label>Votre age  <Input placeholder="votre age?" type="number" min="0"></Input></label></div><br>
             <div><label>Votre date de naissance  <Input type="date"></Input></label></div><br>
             <div><label>Votre adresse Email  <Input></Input></label></div><br>
-            <div><label>Votre adresse  <Input placeholder="Votre adresse?" type="textarea"></Input></label></div><br>
+            <div><label>Votre adresse  <Input placeholder="Votre adresse?"  type="text" size="50"></Input></label></div><br>
             <div><label>L'URL de votre site Web s'il existe  <Input></Input></label></div><br>
-            <div><label>Mot de passe  <Input></Input></label></div><br>
-            <div><label>Retapez mot de passe  <Input></Input></label></div><br>
-        </form>
+            <div><label>Mot de passe  <Input type="password" required aria-required="true"></Input></label></div><br>
+            <div><label>Retapez mot de passe  <Input type="password" required aria-required="true"></Input></label></div><br>
     </fieldset>
     <br>
     <fieldset>
         <legend align="center">Gestion des groupes et des options</legend>
-            <div><label>Votre groupe :  
-            <label>Groupe 1<Input type="radio"></Input:radio>
-            <label>Groupe 2<Input type="radio"></Input:radio>
-            <label>Groupe 3<Input type="radio"></Input:radio></label></div><br>
+            <div>
+                <label>Votre groupe : 
+            <label>Groupe 1<Input type="radio" name="rad"></label>
+            <label>Groupe 2<Input type="radio" name="rad"></label>
+            <label>Groupe 3<Input type="radio" name="rad"></label>
+                </label>
+            </div><br>
             <div><label>Numero de carte d'etudiant  </label><Input type="number" placeholder="Num de carte d'étudiant"></Input></div><br><br><br><br><br>
             <div><label>Choisissez les options que vous désirez :  </label><select>
                 <option>J2ee</option>
@@ -109,8 +111,10 @@
                 <option>HTML5</option>
                 <option>Flex</option>
             </select></div><br>
+            <div><label>Input Code<input type="text" required pattern="INSAT[0-9]4"></label></div>
     </fieldset><br>
-    <div><Input type="submit" value="valider" onclick="window.location.replace('video.html')"></Input><Input type="reset" value ="réinitialiser" ></Input></div>
+    <div><Input type="submit" value="valider"></Input>
+        <Input type="reset" value ="réinitialiser" ></Input></div>
 </form>
 </div>
 </body>
